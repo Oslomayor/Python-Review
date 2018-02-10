@@ -44,6 +44,7 @@ re.S 可以跨行匹配
 sample_3 = '''<div>Denis
 </div>'''
 infos = re.findall('<div>(.*?)</div>', sample_3, re.S)
+print(infos)
 ```
 
 输出：
