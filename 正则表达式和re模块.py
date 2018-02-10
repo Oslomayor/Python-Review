@@ -26,19 +26,40 @@
 # sub()函数, 替换字符串中的匹配项
 # findall()函数, 匹配所有符合规律的内容, 返回结果是列表
 
+# re 模块修饰符
+# re.S 可以跨行匹配
+
 import re
 
 sample_1 = 'one1two2three3four4five5'
 sample_2 = 'xxIxxfahigihbarhxxLovexxdgraergeragrbbyuxxPythonxxfjhohjqqw'
+sample_3 = '''<div>Denis
+</div>'''
+
 # 提取数字12345
 infos = re.findall('\d', sample_1)
+print('# 提取数字12345')
 print(infos)
+
 # 提取单词 one two three four five
 infos = re.findall('(.*?)\d', sample_1)
+print('# 提取单词 one two three four five')
 print(infos)
+
 # 提取 xx...xx 夹的字符串
 infos = re.findall('xx(.*?)xx', sample_2)
+print('# 提取 xx...xx 夹的字符串')
 print(infos)
+
+# 使用 re.S 跨行匹配
+infos = re.findall('<div>(.*?)</div>', sample_3, re.S)
+print('# 使用 re.S 跨行匹配')
+print(infos)
+infos = infos[0].strip()
+print(infos)
+
+
+
 
 
 
