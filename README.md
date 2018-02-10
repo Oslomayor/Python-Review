@@ -31,6 +31,24 @@ __'(.*?)' -> 匹配任意字符, 返回 () 中的内容__
 
 ### Python re 模块
 
+#### re 函数
+
 1. search()函数, 匹配第一个符合规律的内容
 2. sub()函数, 替换字符串中的匹配项
 3. findall()函数, 匹配所有符合规律的内容, 返回结果是列表
+
+#### re 模块修饰符
+re.S 可以跨行匹配
+
+```python
+sample_3 = '''<div>Denis
+</div>'''
+infos = re.findall('<div>(.*?)</div>', sample_3, re.S)
+```
+
+输出：
+
+```python
+['Denis\n']
+```
+
