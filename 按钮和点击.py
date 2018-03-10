@@ -5,6 +5,7 @@
 
 import tkinter
 
+# 定义点击按钮后地执行函数
 def click1():
     print("Clicked 1!")
 
