@@ -125,3 +125,13 @@ top.mainloop()
 
 ![](https://github.com/Oslomayor/Markdown-Imglib/blob/master/Imgs/tkinter%E6%8C%89%E9%92%AE.PNG?raw=true)
 
+### Python xlwt-Excel 储存
+```python
+import xlwt
+book = xlwt.Workbook(encoding='utf-8')
+sheet = book.add_sheet('Sheet1')
+# sheet.write(#行，#列，#内容)
+sheet.write(0,0,'Python')
+sheet.write(0,1,'Excel')
+book.save('E:\AllPrj\PyCharmPrj\py-crawler\Excel 存储\Excel 储存测试.xls')
+```
