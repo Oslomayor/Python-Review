@@ -135,3 +135,6 @@ sheet.write(0,0,'Python')
 sheet.write(0,1,'Excel')
 book.save('E:\AllPrj\PyCharmPrj\py-crawler\Excel 存储\Excel 储存测试.xls')
 ```
+
+### Python 多进程库
+[Python multiprocessing](https://github.com/Oslomayor/Python-Multiprocessing-Test)
